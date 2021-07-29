@@ -4,7 +4,6 @@ import hmac
 import hashlib
 import random
 import json
-import datetime
 
 host = "https://api.hoo.co"
 
@@ -63,8 +62,14 @@ while n > 0:
     res3 = requests.post(host + pathSell, data=objSell)
 
     print(res3)
-    print(datetime.datetime.now())
+
+    pathTime = "/open/innovate/v1/timestamp"
+    res4 = requests.get(host + pathTime)
+    resTime = json.loads(res4.content)
+    ts=resTime['data']
+
     time.sleep(3)
+    
 
 
 
