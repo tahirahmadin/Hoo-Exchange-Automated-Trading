@@ -40,8 +40,8 @@ while n > 0:
     # print(datas)
 
     arrayLength = len(datas['data'])
-    openPrice = datas['data'][arrayLength]['open']
-    closePrice = datas['data'][arrayLength]['close']
+    openPrice = datas['data'][arrayLength-1]['open']
+    closePrice = datas['data'][arrayLength-1]['close']
 
     print("openPrice: "+openPrice)
     print("closePrice: "+closePrice)
