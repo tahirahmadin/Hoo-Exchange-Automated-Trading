@@ -39,8 +39,9 @@ while n > 0:
     datas = json.loads(output)
     # print(datas)
 
-    openPrice = datas['data'][0]['open']
-    closePrice = datas['data'][0]['close']
+    arrayLength = len(datas['data'])
+    openPrice = datas['data'][arrayLength]['open']
+    closePrice = datas['data'][arrayLength]['close']
 
     print("openPrice: "+openPrice)
     print("closePrice: "+closePrice)
